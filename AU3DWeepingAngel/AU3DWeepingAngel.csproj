@@ -1,0 +1,67 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="0Harmony">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Among Us 3D\MelonLoader\net6\0Harmony.dll</HintPath>
+    </Reference>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Among Us 3D\MelonLoader\Il2CppAssemblies\Assembly-CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppFusion.Common">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Among Us 3D\MelonLoader\Il2CppAssemblies\Il2CppFusion.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppFusion.Runtime">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Among Us 3D\MelonLoader\Il2CppAssemblies\Il2CppFusion.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppFusion.Scripts">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Among Us 3D\MelonLoader\Il2CppAssemblies\Il2CppFusion.Scripts.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppInterop.Common">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Among Us 3D\MelonLoader\net6\Il2CppInterop.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppInterop.Runtime">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Among Us 3D\MelonLoader\net6\Il2CppInterop.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2Cppmscorlib">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Among Us 3D\MelonLoader\Il2CppAssemblies\Il2Cppmscorlib.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppSG.Airlock">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Among Us 3D\MelonLoader\Il2CppAssemblies\Il2CppSG.Airlock.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppSG.FusionSimulator">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Among Us 3D\MelonLoader\Il2CppAssemblies\Il2CppSG.FusionSimulator.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppSG.GlobalEvents">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Among Us 3D\MelonLoader\Il2CppAssemblies\Il2CppSG.GlobalEvents.dll</HintPath>
+    </Reference>
+    <Reference Include="MelonLoader">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Among Us 3D\MelonLoader\net6\MelonLoader.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.TextMeshPro">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Among Us 3D\MelonLoader\Il2CppAssemblies\Unity.TextMeshPro.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Among Us 3D\MelonLoader\Il2CppAssemblies\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Among Us 3D\MelonLoader\Il2CppAssemblies\UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Among Us 3D\MelonLoader\Il2CppAssemblies\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.PhysicsModule">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Among Us 3D\MelonLoader\Il2CppAssemblies\UnityEngine.PhysicsModule.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="@echo off&#xD;&#xA;copy /Y &quot;$(TargetDir)$(TargetFileName)&quot; &quot;C:\Program Files (x86)\Steam\steamapps\common\Among Us 3D\Mods\WeepingAngel.dll&quot;&#xD;&#xA;copy /Y &quot;$(TargetDir)$(TargetFileName)&quot; &quot;C:\Program Files (x86)\Steam\steamapps\common\Among Us VR\Mods\WeepingAngel.dll&quot;" ContinueOnError="true" />
+  </Target>
+
+</Project>

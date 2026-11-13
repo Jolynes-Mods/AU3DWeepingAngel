@@ -59,7 +59,7 @@ namespace AU3DWeepingAngel.Managers
                 break;
             }
 
-            MelonLogger.Msg("Weeping Ghost appeared");
+            MelonLogger.Msg("Weeping Ghost spawned");
         }
 
         private static void Think()

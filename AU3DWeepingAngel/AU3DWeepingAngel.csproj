@@ -16,6 +16,9 @@
     <Reference Include="Il2CppFusion.Common">
       <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Among Us 3D\MelonLoader\Il2CppAssemblies\Il2CppFusion.Common.dll</HintPath>
     </Reference>
+    <Reference Include="Il2CppFusion.Realtime">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Among Us 3D\MelonLoader\Il2CppAssemblies\Il2CppFusion.Realtime.dll</HintPath>
+    </Reference>
     <Reference Include="Il2CppFusion.Runtime">
       <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Among Us 3D\MelonLoader\Il2CppAssemblies\Il2CppFusion.Runtime.dll</HintPath>
     </Reference>

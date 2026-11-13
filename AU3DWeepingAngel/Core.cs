@@ -17,6 +17,7 @@ namespace AU3DWeepingAngel
         public override void OnSceneWasInitialized(int buildIndex, string sceneName)
         {
             Settings.InGame = sceneName != "Boot" && sceneName != "Title";
+            if (!Settings.InGame) Settings.ModdedLobby = false;
             GhostManager.Active = false;
         }
 

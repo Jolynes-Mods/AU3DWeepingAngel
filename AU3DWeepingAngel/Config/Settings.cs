@@ -4,6 +4,7 @@ namespace AU3DWeepingAngel.Config
     {
         internal static bool InGame = false;
         internal static bool WeepingAngelEnabled = true;
+        internal static bool ModdedLobby = false;
         internal static bool IsHost => GameReferences.Rig != null && GameReferences.Rig.PState.PlayerId == 9;
     }
 }

@@ -17,7 +17,7 @@ namespace AU3DWeepingAngel.Config
         public static AirlockPeer Peer;
         public static SabotageManager Sabotage;
 
-        internal static bool Allowed => Settings.WeepingAngelEnabled && Session != null && (Session.IsPrivate || Session.IsCustomLobby);
+        internal static bool Allowed => Settings.WeepingAngelEnabled && Session != null && (Session.IsPrivate || Settings.ModdedLobby);
 
         internal static void ResetReferences()
         {

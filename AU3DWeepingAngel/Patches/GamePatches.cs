@@ -13,6 +13,20 @@ namespace AU3DWeepingAngel.Patches
 {
     internal class GamePatches
     {
+        [HarmonyPatch(typeof(GameSession), nameof(GameSession.SyncWithSessionInfo))]
+        public class ModdedLobbyPatch
+        {
+            [HarmonyPriority(Priority.First)]
+            public static void Prefix(GameSession __instance)
+            {
+                SessionInfo info = __instance.Runner?.SessionInfo;
+                if (info?.Properties == null || !info.Properties.ContainsKey("gamemode") || !info.Properties["gamemode"].IsString) return;
+
+                string mode = info.Properties["gamemode"];
+                if (mode.StartsWith("modded_")) Settings.ModdedLobby = true;
+            }
+        }
+
         [HarmonyPatch(typeof(NetworkRunner), nameof(NetworkRunner.Fusion_Simulation_ICallbacks_OnReliableData))]
         public class ReceivePatch
         {
